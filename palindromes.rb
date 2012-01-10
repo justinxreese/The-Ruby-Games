@@ -8,5 +8,5 @@ end
 
 str = "abacdfgdcabaypqqpy"
 str = "racecar"
-str = "I went to the zoo to ride my racecar all around"
+str = "I went to the zoo kayak to ride my racecar all around"
 puts find_longest_palindrome(str)
