@@ -6,12 +6,14 @@
 # a string containing only letters, embedded within this string will be one or more palindromes. You must find 
 # the longest possible palindrome within the given string and return the palindrome.
 #
-# Result : 14th place fastest
+# Result : Runs in 0.087532s (13th place) 148 characters (68th place) Submitted by justinxreese on January 10th, 2012 17:13
 
 def find_longest_palindrome(string)
-  string.length.downto(0) { |i|
-    0.upto(string.length) { |j|
-      return string[j,i] if string[j,i] == string[j,i].reverse && string[j,i].size > 1
+  l = string.size
+  l.downto(0) { |i|
+    0.upto(l) { |j|
+      s = string.slice(j,i)
+      return s if s == s.reverse && s.size > 1
     }
   }
 end
